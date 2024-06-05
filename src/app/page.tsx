@@ -1,14 +1,9 @@
-'use client';
-
 import Link from "next/link";
-import { useRouter } from "next/navigation"
 
 /* eslint-disable @next/next/no-img-element */
 export default function Home() {
-  const router = useRouter();
-
   const ProfileCard = ({ name, role, img, href }: { name: string; role: string; img: string; href: string }) => (
-    <div className="flex flex-col items-center justify-center space-y-4 text-center cursor-pointer" onClick={()=>router.push(href)}>
+    <Link className="flex flex-col items-center justify-center space-y-4 text-center cursor-pointer" href={href}>
       <img
         alt={name}
         className="mx-auto aspect-square overflow-hidden rounded-full object-cover"
@@ -20,7 +15,7 @@ export default function Home() {
         <h3 className="text-xl font-bold">{name}</h3>
         <p className="text-gray-500">{role}</p>
       </div>
-    </div>
+    </Link>
   );
 
   
@@ -38,15 +33,15 @@ export default function Home() {
               Building Champions, On and Off the Mat
             </h1>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                onClick={() => router.push("program#schedule")}
+              <Link
+                href={'/program#schedule'}
                 className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
               >
                 Check Schedule
-              </a>
-              <a href="#" className="text-sm font-semibold leading-6 text-white">
+              </Link>
+              <Link href="#1" className="text-sm font-semibold leading-6 text-white">
                 Learn more <span aria-hidden="true">→</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -64,7 +59,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white py-24 sm:py-32">
+      <section className="bg-white py-24 sm:py-32" id="1">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">

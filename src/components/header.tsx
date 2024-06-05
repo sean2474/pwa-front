@@ -5,6 +5,7 @@ import { Dialog, DialogPanel, Transition, TransitionChild } from '@headlessui/re
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
 
 interface NavProp {
   name: string;
@@ -19,10 +20,9 @@ const navigation: Array<NavProp> = [
   { name: 'Store', href: '/store', mobileMenu: false },
 ]
 
-const whiteHeaderPage = ['/about', '/program', '/facilities', '/store'];
+const whiteHeaderPage = ['/about', '/program', '/facilities', '/store', '/login'];
 
 export const Header = () => {
-  const router = useRouter();
   const pathname = usePathname();
 
   const isBlack = whiteHeaderPage.includes(pathname);
@@ -31,9 +31,9 @@ export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
 
   const Logo = ({color}: {color: 'white'|'black'}) => (
-    <a className="-m-1.5 p-1.5 flex cursor-pointer lg:mr-20" onClick={() => router.push('/')}>
+    <Link className="-m-1.5 p-1.5 flex cursor-pointer lg:mr-20" href={"/"}>
       <Image src={`/logo/pwa_logo${color==='black'?'_black':''}.svg`} alt="Prep Wrestling Academy Logo" width={80} height={40} />
-    </a>
+    </Link>
   )
 
   useEffect(() => {
@@ -61,9 +61,9 @@ export const Header = () => {
           <Logo color={isBlack ? 'black' : 'white'} />
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm font-semibold leading-6">
+              <Link key={item.name} href={item.href} className="text-sm font-semibold leading-6">
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -78,9 +78,9 @@ export const Header = () => {
           </button>
         </div>
         <div className="hidden lg:flex">
-          <a href="#" className="text-sm font-semibold leading-6">
+          <Link href="/login" className="text-sm font-semibold leading-6">
             Log in <span aria-hidden="true">&rarr;</span>
-          </a>
+          </Link>
         </div>
       </nav>
 
@@ -107,10 +107,10 @@ export const Header = () => {
           >
             <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
               <div className="flex items-center justify-between">
-                <a href="#" className="-m-1.5 p-1.5">
+                <Link href="/" className="-m-1.5 p-1.5">
                   <span className="sr-only">Your Company</span>
                   <Logo color="white" />
-                </a>
+                </Link>
                 <button
                   type="button"
                   className="-m-2.5 rounded-md p-2.5 text-gray-400"
@@ -124,25 +124,23 @@ export const Header = () => {
                 <div className="-my-6 divide-y divide-gray-500/25">
                   <div className="space-y-2 py-6">
                     {navigation.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
-                        onClick={() => {
-                          setMobileMenuOpen(false);
-                          router.push(item.href);
-                        }}
+                        onClick={() => setMobileMenuOpen(false)}
+                        href={item.href}
                         className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800 ${!item.mobileMenu && 'lg:hidden'}`}
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                   <div className="py-6">
-                    <a
-                      href="#"
+                    <Link
+                      href="/login"
                       className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:text-gray-900 hover:bg-gray-50"
                     >
                       Log in
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
