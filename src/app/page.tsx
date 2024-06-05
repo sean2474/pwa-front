@@ -1,15 +1,16 @@
+import Image from "next/image";
 import Link from "next/link";
 
-/* eslint-disable @next/next/no-img-element */
 export default function Home() {
   const ProfileCard = ({ name, role, img, href }: { name: string; role: string; img: string; href: string }) => (
     <Link className="flex flex-col items-center justify-center space-y-4 text-center cursor-pointer" href={href}>
-      <img
+      <Image
         alt={name}
         className="mx-auto aspect-square overflow-hidden rounded-full object-cover"
         height="200"
         src={img}
         width="200"
+        layout="responsive"
       />
       <div className="space-y-2">
         <h3 className="text-xl font-bold">{name}</h3>
@@ -22,8 +23,11 @@ export default function Home() {
   return (
     <main className="bg-gray-900">
       <section className="relative isolate overflow-hidden pt-14" id="hero">
-        <img
-          src="images/hero-image.jpeg"
+        <Image
+          src="/images/hero-image.jpeg"
+          layout="responsive"
+          width={100}
+          height={100}
           alt=""
           className="absolute inset-0 -z-10 h-full w-full object-cover filter brightness-[0.25]"
         />
@@ -134,10 +138,13 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <img
+            <Image
               alt="Programs"
               className="mx-auto overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
               src="/images/schedule.jpeg"
+              width={100}
+              height={100}
+              layout="responsive"
             />
           </div>
         </div>
@@ -155,10 +162,10 @@ export default function Home() {
             </div>
           </div>
           <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 xl:grid-cols-4">
-            <ProfileCard name="Kenneth Lee" role="Chief Consultant" img="profiles/ken.jpg" href="/about#1" />
-            <ProfileCard name="Jun Ho Kim" role="Chief Recruiter" img="profiles/junho.jpg" href="/about#2" />
-            <ProfileCard name="Ho Won “Michael” Lee" role="Head Wrestling Coach" img="profiles/howon.jpg" href="/about#3" />
-            <ProfileCard name="Mark Vujovic" role="Head Grappling Coach/Assistant Wrestling Coach" img="profiles/mark.jpg" href="/about#4" />
+            <ProfileCard name="Kenneth Lee" role="Chief Consultant" img="/profiles/ken.jpg" href="/about#1" />
+            <ProfileCard name="Jun Ho Kim" role="Chief Recruiter" img="/profiles/junho.jpg" href="/about#2" />
+            <ProfileCard name="Ho Won “Michael” Lee" role="Head Wrestling Coach" img="/profiles/howon.jpg" href="/about#3" />
+            <ProfileCard name="Mark Vujovic" role="Head Grappling Coach/Assistant Wrestling Coach" img="/profiles/mark.jpg" href="/about#4" />
           </div>
         </div>
       </section>
