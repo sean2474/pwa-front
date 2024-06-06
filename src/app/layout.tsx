@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import FirebaseProvider from "@/context/FirebaseProvider";
 
 export const metadata: Metadata = {
   title: "Prep Wrestling Academy",
@@ -17,11 +18,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <Header />
-        {children}
-        <Footer />
-      </body>
+      <FirebaseProvider>
+        <body>
+          <Header />
+          {children}
+          <Footer />
+        </body>
+      </FirebaseProvider>
     </html>
   );
 }
