@@ -1,7 +1,5 @@
 [build]
-  command = "sudo next build"
   publish = ".next"
-  environment = { NETLIFY_BUILD_BASE = "/opt/build/repo" }
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
