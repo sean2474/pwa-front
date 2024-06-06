@@ -1,6 +1,7 @@
 [build]
-command = "next build" 
-publish = ".next"		
+  command = "next build"
+  publish = ".next"
+  environment = { NETLIFY_BUILD_BASE = "/opt/build/repo" }
 
 [[plugins]]
-package = "@netlify/plugin-nextjs"
+  package = "@netlify/plugin-nextjs"
