@@ -24,7 +24,7 @@ export default function Home() {
     <main className="bg-gray-900">
       <section className="relative isolate overflow-hidden pt-14" id="hero">
         <Image
-          src="/images/hero-image.jpeg"
+          src="https://firebasestorage.googleapis.com/v0/b/prep-wrestling-academy-269d8.appspot.com/o/images%2Fhero-image.jpeg?alt=media&token=47f384f0-0f37-4801-bee7-196d0044c7a0"
           layout="responsive"
           width={100}
           height={100}
@@ -141,7 +141,7 @@ export default function Home() {
             <Image
               alt="Programs"
               className="mx-auto overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
-              src="/images/schedule.jpeg"
+              src="https://firebasestorage.googleapis.com/v0/b/prep-wrestling-academy-269d8.appspot.com/o/images%2Fschedule.jpeg?alt=media&token=051d337c-0af2-47bc-a1fc-2caeb1b196af"
               width={100}
               height={100}
               layout="responsive"
@@ -161,11 +161,11 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 xl:grid-cols-4">
-            <ProfileCard name="Kenneth Lee" role="Chief Consultant" img="/profiles/ken.jpg" href="/about#1" />
-            <ProfileCard name="Jun Ho Kim" role="Chief Recruiter" img="/profiles/junho.jpg" href="/about#2" />
-            <ProfileCard name="Ho Won “Michael” Lee" role="Head Wrestling Coach" img="/profiles/howon.jpg" href="/about#3" />
-            <ProfileCard name="Mark Vujovic" role="Head Grappling Coach/Assistant Wrestling Coach" img="/profiles/mark.jpg" href="/about#4" />
+          <div className="mx-auto grid max-w-5xl items-start gap-6 py-12 lg:grid-cols-2 xl:grid-cols-4">
+            <ProfileCard name="Kenneth Lee" role="Chief Consultant" img="https://firebasestorage.googleapis.com/v0/b/prep-wrestling-academy-269d8.appspot.com/o/profiles%2Fken.jpg?alt=media&token=4f7449ec-e459-4ff0-bc77-43c8327e0ebc" href="/about#1" />
+            <ProfileCard name="Jun Ho Kim" role="Chief Recruiter" img="https://firebasestorage.googleapis.com/v0/b/prep-wrestling-academy-269d8.appspot.com/o/profiles%2Fjunho.jpg?alt=media&token=3f2f0a6a-9804-45a6-809b-f377a4eea35a" href="/about#2" />
+            <ProfileCard name="Ho Won “Michael” Lee" role="Head Wrestling Coach" img="https://firebasestorage.googleapis.com/v0/b/prep-wrestling-academy-269d8.appspot.com/o/profiles%2Fhowon.jpg?alt=media&token=b8956e89-5ab3-486e-9b45-286769f59bcb" href="/about#3" />
+            <ProfileCard name="Mark Vujovic" role="Head Grappling Coach/Assistant Wrestling Coach" img="https://firebasestorage.googleapis.com/v0/b/prep-wrestling-academy-269d8.appspot.com/o/profiles%2Fmark.jpg?alt=media&token=e37c03e7-b51b-4a86-9b4b-73fb18148e3e" href="/about#4" />
           </div>
         </div>
       </section>

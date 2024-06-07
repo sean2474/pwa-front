@@ -17,10 +17,9 @@ const navigation: Array<NavProp> = [
   { name: 'About', href: '/about', mobileMenu: false },
   { name: 'Program', href: '/program', mobileMenu: false },
   { name: 'Facilities', href: '/facilities', mobileMenu: false},
-  { name: 'Store', href: '/store', mobileMenu: false },
 ]
 
-const whiteHeaderPage = ['/about', '/program', '/facilities', '/store', '/login'];
+const whiteHeaderPage = ['/about', '/program', '/facilities'];
 
 export const Header = () => {
   const pathname = usePathname();
@@ -76,11 +75,6 @@ export const Header = () => {
             <span className="sr-only">Open main menu</span>
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
-        </div>
-        <div className="hidden lg:flex">
-          <Link href="/login" className="text-sm font-semibold leading-6">
-            Log in <span aria-hidden="true">&rarr;</span>
-          </Link>
         </div>
       </nav>
 

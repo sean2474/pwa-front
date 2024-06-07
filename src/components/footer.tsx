@@ -24,7 +24,7 @@ export const Footer = () => (
               </Link>
             </div>
             <div className="relative w-full h-auto aspect-2.86 mt-4">
-              <Image className="contain" src={"/images/footer-image.jpeg"} alt="Footer Image" fill/>
+              <Image className="contain" src={"https://firebasestorage.googleapis.com/v0/b/prep-wrestling-academy-269d8.appspot.com/o/images%2Ffooter-image.jpeg?alt=media&token=3650aeed-15cb-44b1-9ddd-64d54d6f4492"} alt="Footer Image" fill/>
             </div>
           </div>
         </div>

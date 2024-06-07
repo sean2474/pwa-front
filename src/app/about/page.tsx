@@ -17,7 +17,7 @@ const team: Array<Profile> = [
   { 
     name: 'Kenneth Lee', 
     role: 'Chief Consultant', 
-    img: '/profiles/ken.jpg', 
+    img: 'https://firebasestorage.googleapis.com/v0/b/prep-wrestling-academy-269d8.appspot.com/o/profiles%2Fken.jpg?alt=media&token=4f7449ec-e459-4ff0-bc77-43c8327e0ebc', 
     id: '1',
     description: [
       'As Chief Consultant, Kenneth Lee spearheads recruitment consultation and outreach efforts on behalf of our student-athletes, facilitating connections with a wide range of schools across the United States. With a wealth of experience as a former student-athlete himself, Kenneth brings firsthand knowledge of the complexities involved in athletic recruitment.',
@@ -39,7 +39,7 @@ const team: Array<Profile> = [
   { 
     name: 'Jun Ho Kim', 
     role: 'Chief Recruiter', 
-    img: '/profiles/junho.jpg', 
+    img: 'https://firebasestorage.googleapis.com/v0/b/prep-wrestling-academy-269d8.appspot.com/o/profiles%2Fjunho.jpg?alt=media&token=3f2f0a6a-9804-45a6-809b-f377a4eea35a', 
     id: '2',
     description: [
       'Jun Ho Kim is the Chief Recruiter at PWA, where he spearheads recruitment efforts and oversees daily operations. With a lifelong passion for wrestling and a deep-seated enthusiasm for sports, Jun Ho is committed to expanding wrestling in schools across Korea in the hopes of fostering physical and mental wellness among children, particularly those in middle and high school.',
@@ -58,7 +58,7 @@ const team: Array<Profile> = [
   { 
     name: 'Ho Won “Michael” Lee', 
     role: 'Head Wrestling Coach', 
-    img: '/profiles/howon.jpg', 
+    img: 'https://firebasestorage.googleapis.com/v0/b/prep-wrestling-academy-269d8.appspot.com/o/profiles%2Fhowon.jpg?alt=media&token=b8956e89-5ab3-486e-9b45-286769f59bcb', 
     id: '3',
     description: [
     'Michael is a student-athlete enrolled at Catholic Kwandong University, majoring in Sports Healthcare. Alongside his studies, Michael serves as the Head Wrestling Coach at PWA, drawing from a rich background in sports. Before venturing into wrestling, Michael distinguished himself as a nationally ranked bobsledder, demonstrating his versatility and athleticism across multiple disciplines.', 
@@ -75,7 +75,7 @@ const team: Array<Profile> = [
   { 
     name: 'Mark Vujovic', 
     role: 'Head Grappling Coach/Assistant Wrestling Coach', 
-    img: '/profiles/mark.jpg', 
+    img: 'https://firebasestorage.googleapis.com/v0/b/prep-wrestling-academy-269d8.appspot.com/o/profiles%2Fmark.jpg?alt=media&token=e37c03e7-b51b-4a86-9b4b-73fb18148e3e', 
     id: '4',
     description: [
       'Mark serves as the Resident Head Grappling Coach and Assistant Wrestling Coach at PWA. With over two decades immersed in folkstyle wrestling and grappling, he boasts a remarkable background, having competed at the pinnacle of both sports in the United States and Korea. Mark\'s firsthand experience lends invaluable insights into the journey of aspiring youth wrestlers, encompassing the intricate nuances of becoming a collegiate athlete in the U.S.',
@@ -129,7 +129,7 @@ export default function Home() {
           </div>
           <div className="mx-5 lg:mx-auto lg:w-1/2">
             <div className="relative w-full h-auto mt-4">
-              <Image className="contain rounded-lg" src={"/images/about-image.jpeg"} alt="Footer Image" layout="responsive" width={100} height={100}/>
+              <Image className="contain rounded-lg" src={"https://firebasestorage.googleapis.com/v0/b/prep-wrestling-academy-269d8.appspot.com/o/images%2Fabout-image.jpeg?alt=media&token=2920dba8-87cf-43c7-a383-44853f649ec9"} alt="Footer Image" layout="responsive" width={100} height={100}/>
             </div>
           </div>
         </div>
@@ -194,7 +194,7 @@ export default function Home() {
             </div>
           </div>
           <div className="w-full p-16 m-auto lg:w-1/2">
-            <Image src="/images/about-image-2.jpeg" alt="about image" width={200} height={200} layout={'responsive'} className="rounded-lg" />
+            <Image src="https://firebasestorage.googleapis.com/v0/b/prep-wrestling-academy-269d8.appspot.com/o/images%2Fabout-image-2.jpeg?alt=media&token=60f5b419-0a5a-4ad1-a08b-bb18b9fd680e" alt="about image" width={200} height={200} layout={'responsive'} className="rounded-lg" />
           </div>
         </div>
       </section>
